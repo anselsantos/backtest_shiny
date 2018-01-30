@@ -33,27 +33,27 @@ stock1_all = NULL #declare
 function(input, output, session) {
   
   addTooltip(session, id="stockInput", title=HTML('<font size="1">Select the stock you want to backtest a strategy on. The selection of stocks include the top 100 companies in the S&P 500 and some ETFs</font>'),
-             placement = "bottom", trigger = "hover", options = list(delay = list(show=2000, hide=250)))
+             placement = "bottom", trigger = "hover", options = list(delay = list(show=5000)))
   addTooltip(session, id="entryStrat", title=HTML('<font size="1">This sets the indicator to be used for the exit strategy. if the indicator is below the set value, the strategy will buy the security</font>'),
-             placement = "bottom", trigger = "hover", options = list(delay = list(show=2000, hide=250)))
+             placement = "bottom", trigger = "hover", options = list(delay = list(show=5000)))
   addTooltip(session, id="exitStrat", title=HTML('<font size="1">This sets the indicator to be used for the exit strategy. if the indicator is above the set value, the strategy will sell the security if we have it.  The backtest is long-only and will not short the security</font>'),
-             placement = "bottom", trigger = "hover", options = list(delay = list(show=2000, hide=250)))
+             placement = "bottom", trigger = "hover", options = list(delay = list(show=5000)))
   addTooltip(session, id="buyAtStart", title=HTML('<font size="1">Selecting yes means that the backtest will start with a long position at the start of the backtest period</font>'),
-             placement = "bottom", trigger = "hover", options = list(delay = list(show=2000, hide=250)))
+             placement = "bottom", trigger = "hover", options = list(delay = list(show=5000)))
   
   addTooltip(session, id="enterSMAset", title=HTML('<font size="1">The simple moving average is the most commonly used indicator to identify support and resistance</font>'),
-             placement = "bottom", trigger = "hover", options = list(delay = list(show=2000, hide=250)))
+             placement = "bottom", trigger = "hover", options = list(delay = list(show=5000)))
   addTooltip(session, id="enterRSIset", title=HTML('<font size="1">An RSI below 30 means that a stock is oversold</font>'),
-             placement = "bottom", trigger = "hover", options = list(delay = list(show=2000, hide=250)))
+             placement = "bottom", trigger = "hover", options = list(delay = list(show=5000)))
   addTooltip(session, id="enterStochset", title=HTML('<font size="1">A stochastic oscillator reading below 0.20 means that the stock is oversold</font>'),
-             placement = "bottom", trigger = "hover", options = list(delay = list(show=2000, hide=250)))
+             placement = "bottom", trigger = "hover", options = list(delay = list(show=5000)))
   
   addTooltip(session, id="exitSMAset", title=HTML('<font size="1">The simple moving average is the most commonly used indicator to identify support and resistance</font>'),
-             placement = "bottom", trigger = "hover", options = list(delay = list(show=2000, hide=250)))
+             placement = "bottom", trigger = "hover", options = list(delay = list(show=5000)))
   addTooltip(session, id="exitRSIset", title=HTML('<font size="1">An RSI above 70 means that a stock is overbought</font>'),
-             placement = "bottom", trigger = "hover", options = list(delay = list(show=2000, hide=250)))
+             placement = "bottom", trigger = "hover", options = list(delay = list(show=5000)))
   addTooltip(session, id="exitStochset", title=HTML('<font size="1">A stochastic oscillator reading above 0.80 means that the stock is overbought</font>'),
-             placement = "bottom", trigger = "hover", options = list(delay = list(show=2000, hide=250)))
+             placement = "bottom", trigger = "hover", options = list(delay = list(show=5000)))
   
   t1 <- eventReactive(input$button1, {
     HTML(paste0('<div style="text-align:center"><font size="2"><b>',input$stockInput, ' with SMA, RSI, and Stochastics</b></font></div>'))
